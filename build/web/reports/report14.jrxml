@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report14" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="c7cb5907-78de-401a-b7e7-90006f84fba7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="206"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     organizacionred.`central` AS organizacionred_central,
+     organizacionred.`distrito` AS organizacionred_distrito,
+     organizacionred.`pr` AS organizacionred_pr,
+     organizacionred.`tema` AS organizacionred_tema,
+     organizacionred.`costocontrato` AS organizacionred_costocontrato,
+     organizacionred.`costoproyecto` AS organizacionred_costoproyecto,
+     organizacionred.`pares` AS organizacionred_pares,
+     organizacionred.`estado` AS organizacionred_estado,
+     organizacionred.`fechaentrega` AS organizacionred_fechaentrega,
+     organizacionred.`inicioprogramado` AS organizacionred_inicioprogramado,
+     organizacionred.`finprogramado` AS organizacionred_finprogramado,
+     organizacionred.`avance` AS organizacionred_avance,
+     organizacionred.`fechareporte` AS organizacionred_fechareporte,
+     organizacionred.`mesfacturacion` AS organizacionred_mesfacturacion,
+     organizacionred.`contratista` AS organizacionred_contratista
+FROM
+     `organizacionred` organizacionred]]>
+	</queryString>
+	<field name="organizacionred_central" class="java.lang.String"/>
+	<field name="organizacionred_distrito" class="java.lang.Integer"/>
+	<field name="organizacionred_pr" class="java.lang.Integer"/>
+	<field name="organizacionred_tema" class="java.lang.String"/>
+	<field name="organizacionred_costocontrato" class="java.lang.Integer"/>
+	<field name="organizacionred_costoproyecto" class="java.lang.Integer"/>
+	<field name="organizacionred_pares" class="java.lang.Integer"/>
+	<field name="organizacionred_estado" class="java.lang.String"/>
+	<field name="organizacionred_fechaentrega" class="java.lang.String"/>
+	<field name="organizacionred_inicioprogramado" class="java.lang.String"/>
+	<field name="organizacionred_finprogramado" class="java.lang.String"/>
+	<field name="organizacionred_avance" class="java.lang.String"/>
+	<field name="organizacionred_fechareporte" class="java.lang.String"/>
+	<field name="organizacionred_mesfacturacion" class="java.lang.String"/>
+	<field name="organizacionred_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="906c71a7-a80a-4c42-a36e-c37f52ca76dc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="a63cc6c6-06da-4c8a-8e61-1e1c893b826f"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Organizacion Red]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#003399" uuid="5987b59d-45bd-44ac-9df3-80020f08cdaf"/>
+				<staticText>
+					<reportElement style="Column header" x="73" y="0" width="47" height="15" uuid="d47991dc-ce64-4b3b-8843-96c45b17b4d4"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="183" y="0" width="47" height="15" uuid="37790c62-6223-4f0e-b14b-225fad15ed77"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="251" y="0" width="21" height="15" uuid="e1f51414-35c3-4bcf-934a-41fcfa50157a"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="378" y="0" width="36" height="15" uuid="aaf719f7-365f-48ab-a06a-9fb2e8949845"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="502" y="0" width="86" height="15" uuid="df584923-4766-4243-a2dc-0945ee3b8df3"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="594" y="0" width="89" height="15" uuid="1c83f0cc-7732-48ce-b53d-77c4ca36b716"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="689" y="0" width="47" height="15" uuid="e395b349-e2c4-4686-9f75-413e91ad7cf7"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="761" y="0" width="47" height="15" uuid="944a988c-50c4-4316-82dc-197e0cd94229"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="824" y="0" width="86" height="15" uuid="7a68c88e-2bdf-4f47-9261-7d0495902246"/>
+					<text><![CDATA[Fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="911" y="0" width="65" height="15" uuid="08864de3-fafc-4db9-b334-d8bc45ffe12a"/>
+					<text><![CDATA[Inicio obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="996" y="0" width="59" height="15" uuid="acd89628-f40a-4a8e-8781-f4c936e86695"/>
+					<text><![CDATA[Fin obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1061" y="0" width="47" height="15" uuid="aec9d479-ec30-4911-9483-dfaf7ca8bd01"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1107" y="0" width="81" height="15" uuid="0d774ed8-2d78-4810-a167-acc9c09209f3"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1192" y="0" width="96" height="15" uuid="84c152f0-7a25-4370-970b-74a3a3e2955a"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1291" y="0" width="65" height="15" uuid="4153e537-d112-43c4-8d89-43fbc48d3304"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1360" height="15" uuid="d3c3a79d-d13a-46be-994a-e9148f71ce30"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="185" height="15" uuid="105400c4-1924-4595-92ad-3d5b7c63b0e4"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="182" y="0" width="47" height="15" uuid="64cda63c-aff3-4901-b0a3-b4457974af37"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="233" y="0" width="47" height="15" uuid="976270d0-bf03-46aa-a1da-19b4f022e12d"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="282" y="0" width="221" height="15" uuid="8938f11e-7ec5-4141-80bf-0afcd1ab12e6"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_tema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="506" y="0" width="85" height="15" uuid="91ac12c3-3d52-4eb4-8f0a-f86402dbc831"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="594" y="0" width="87" height="15" uuid="23298032-4165-4234-8540-d34887282d91"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="691" y="0" width="47" height="15" uuid="c7f64b7b-bffe-414c-a02c-c0a7a5581a3f"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="739" y="0" width="85" height="15" uuid="fe58360b-ce02-4847-8b73-f42fff603626"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="829" y="0" width="83" height="15" uuid="169883c6-e865-493d-b9dd-cce16d6da281"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="909" y="0" width="72" height="15" uuid="cdb4dfee-4eb2-49dd-bc38-861ee3493c14"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="987" y="0" width="71" height="15" uuid="fe143b0b-2491-4c1b-bc92-1c1254ea42bd"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1069" y="0" width="47" height="15" uuid="27656f01-73ab-41ec-a542-3c9ba11d00ea"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1112" y="0" width="80" height="15" uuid="f232e9a6-1531-4367-a6fa-623851af075d"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1196" y="0" width="91" height="15" uuid="639ee5aa-0a46-4d67-9eef-2995af925c23"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1291" y="0" width="65" height="15" uuid="0653b9e5-7da8-4590-92ac-dec7dceb59fd"/>
+					<textFieldExpression><![CDATA[$F{organizacionred_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1356" height="1" uuid="3ae61484-52a7-48d9-9d7c-fcec33705814"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="66825365-5d86-4616-acf9-8dec745bbc70"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="a9e8de70-cd8d-4416-85e2-023a365f4294"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Organizacion Red]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

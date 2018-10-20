@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="887d037b-1c62-4645-862d-0b0b0361d49b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     acometidaselectricas.`central` AS acometidaselectricas_central,
+     acometidaselectricas.`distrito` AS acometidaselectricas_distrito,
+     acometidaselectricas.`pr` AS acometidaselectricas_pr,
+     acometidaselectricas.`tema` AS acometidaselectricas_tema,
+     acometidaselectricas.`costocontrato` AS acometidaselectricas_costocontrato,
+     acometidaselectricas.`costoproyecto` AS acometidaselectricas_costoproyecto,
+     acometidaselectricas.`pares` AS acometidaselectricas_pares,
+     acometidaselectricas.`estado` AS acometidaselectricas_estado,
+     acometidaselectricas.`fechaentrega` AS acometidaselectricas_fechaentrega,
+     acometidaselectricas.`inicioprogramado` AS acometidaselectricas_inicioprogramado,
+     acometidaselectricas.`finprogramado` AS acometidaselectricas_finprogramado,
+     acometidaselectricas.`avance` AS acometidaselectricas_avance,
+     acometidaselectricas.`fechareporte` AS acometidaselectricas_fechareporte,
+     acometidaselectricas.`mesfacturacion` AS acometidaselectricas_mesfacturacion,
+     acometidaselectricas.`contratista` AS acometidaselectricas_contratista
+FROM
+     `acometidaselectricas` acometidaselectricas]]>
+	</queryString>
+	<field name="acometidaselectricas_central" class="java.lang.String"/>
+	<field name="acometidaselectricas_distrito" class="java.lang.Integer"/>
+	<field name="acometidaselectricas_pr" class="java.lang.Integer"/>
+	<field name="acometidaselectricas_tema" class="java.lang.String"/>
+	<field name="acometidaselectricas_costocontrato" class="java.lang.Integer"/>
+	<field name="acometidaselectricas_costoproyecto" class="java.lang.Integer"/>
+	<field name="acometidaselectricas_pares" class="java.lang.Integer"/>
+	<field name="acometidaselectricas_estado" class="java.lang.String"/>
+	<field name="acometidaselectricas_fechaentrega" class="java.lang.String"/>
+	<field name="acometidaselectricas_inicioprogramado" class="java.lang.String"/>
+	<field name="acometidaselectricas_finprogramado" class="java.lang.String"/>
+	<field name="acometidaselectricas_avance" class="java.lang.String"/>
+	<field name="acometidaselectricas_fechareporte" class="java.lang.String"/>
+	<field name="acometidaselectricas_mesfacturacion" class="java.lang.String"/>
+	<field name="acometidaselectricas_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="462bd28e-9dd2-4b9f-82c0-cc858b69752a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="daead3c8-291f-407c-9cab-f0f38d6a75f1"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Acometidas Electricas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#003399" uuid="f138acc3-4721-45b7-a755-87bc2ad72b4a"/>
+				<staticText>
+					<reportElement style="Column header" x="29" y="0" width="47" height="15" uuid="ca20591c-07c4-42e6-b571-c6371fbbbda9"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="100" y="0" width="47" height="15" uuid="72c9f85a-8a3e-4704-b746-8427a267ef3c"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="166" y="0" width="19" height="15" uuid="2ef65753-46d8-4739-b55e-6bf8e7cdbdab"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="291" y="0" width="36" height="15" uuid="fb0e686d-8dcd-46d2-9739-f4edd22e39dc"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="430" y="0" width="89" height="15" uuid="35df2064-d929-476b-aa8b-f98468c88179"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="526" y="0" width="90" height="15" uuid="c3fe52f3-e425-4ce1-a780-b83316ecd33c"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="628" y="0" width="37" height="15" uuid="94e9ed3d-85c6-44f9-8198-631c096c1710"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="703" y="0" width="47" height="15" uuid="81214f27-b70e-4468-8b13-d7ea9bb019f0"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="771" y="0" width="81" height="15" uuid="9c8a11cf-3c82-4372-bd24-20673639fefa"/>
+					<text><![CDATA[fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="868" y="0" width="64" height="15" uuid="5c591b24-f546-4bd8-a0cc-b45674a5b259"/>
+					<text><![CDATA[Inicio obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="952" y="0" width="57" height="15" uuid="0df889fc-4358-4cc5-8200-baabd4be18c5"/>
+					<text><![CDATA[Fin obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1024" y="0" width="44" height="15" uuid="f2b59c27-f320-48f0-9242-d91abf799b5c"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1083" y="0" width="82" height="15" uuid="0d3749f2-90ed-4597-95d8-cf1b31ff7e73"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1182" y="0" width="93" height="15" uuid="04ab1bb7-1008-4580-a937-7286082a2f15"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1289" y="0" width="66" height="15" uuid="93251d1c-ee88-4476-9bfe-ebcc4e8689ef"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1360" height="15" uuid="6d03947d-9055-4221-8d1b-d2d4a332cb6a"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="100" height="15" uuid="60524f32-8c81-4823-9bf6-a465aec148c8"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="103" y="0" width="47" height="15" uuid="ae32bb31-0f6a-41e2-a4dd-7b04c23a8fba"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="150" y="0" width="47" height="15" uuid="2c4b88cf-5ff8-489e-af60-9d1c327a4f57"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="199" y="0" width="230" height="15" uuid="2082f807-4305-4e56-95c7-6d9375573b9e"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_tema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="430" y="0" width="88" height="15" uuid="d6ef0d24-73c8-4a7d-8798-d69ff2e569d7"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="527" y="0" width="91" height="15" uuid="a03f486d-1e0b-4bc7-ba1d-8d8c33189734"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="622" y="0" width="47" height="15" uuid="e80fca1e-caa7-4fb7-a345-40bc8f3fa58d"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="671" y="0" width="95" height="15" uuid="ae1bcf0a-e0cd-4714-9f3e-9c96a8dd5ac0"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="771" y="0" width="78" height="15" uuid="c5d59737-2c4e-4af8-9ab5-855959687db0"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="861" y="0" width="73" height="15" uuid="85d85894-3545-4c76-bde6-13d641cf349f"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="942" y="0" width="69" height="15" uuid="b819578f-1d9f-485e-a848-c0fbbef78465"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1023" y="0" width="47" height="15" uuid="cecb1da0-2dee-4037-beb4-cf8aa49a3088"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1083" y="0" width="83" height="15" uuid="3e7f0ede-1d69-4054-9cc1-15f34275de88"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1182" y="0" width="91" height="15" uuid="253ba5b3-f5e2-418c-905d-209f6eb5a102"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1289" y="0" width="71" height="15" uuid="3a85f249-5d44-44b9-8abb-c369de827873"/>
+					<textFieldExpression><![CDATA[$F{acometidaselectricas_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1360" height="1" uuid="46d6b5c2-e0b9-418e-b168-49233502ed50"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="00bf8747-86d0-4a89-8b69-a1bdcf34e81e"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="077b029d-84d4-48f2-9492-7825dfa10e94"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Acometidas Electricas]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

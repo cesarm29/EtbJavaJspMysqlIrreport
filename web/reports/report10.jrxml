@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report10" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="a93c89e3-feb6-486f-ba12-dff20cfb11fe">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="7"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     micromotores.`central` AS micromotores_central,
+     micromotores.`distrito` AS micromotores_distrito,
+     micromotores.`pr` AS micromotores_pr,
+     micromotores.`tema` AS micromotores_tema,
+     micromotores.`costocontrato` AS micromotores_costocontrato,
+     micromotores.`costoproyecto` AS micromotores_costoproyecto,
+     micromotores.`pares` AS micromotores_pares,
+     micromotores.`estado` AS micromotores_estado,
+     micromotores.`fechaentrega` AS micromotores_fechaentrega,
+     micromotores.`inicioprogramado` AS micromotores_inicioprogramado,
+     micromotores.`finprogramado` AS micromotores_finprogramado,
+     micromotores.`avance` AS micromotores_avance,
+     micromotores.`fechareporte` AS micromotores_fechareporte,
+     micromotores.`mesfacturacion` AS micromotores_mesfacturacion,
+     micromotores.`contratista` AS micromotores_contratista
+FROM
+     `micromotores` micromotores]]>
+	</queryString>
+	<field name="micromotores_central" class="java.lang.String"/>
+	<field name="micromotores_distrito" class="java.lang.Integer"/>
+	<field name="micromotores_pr" class="java.lang.Integer"/>
+	<field name="micromotores_tema" class="java.lang.String"/>
+	<field name="micromotores_costocontrato" class="java.lang.Integer"/>
+	<field name="micromotores_costoproyecto" class="java.lang.Integer"/>
+	<field name="micromotores_pares" class="java.lang.Integer"/>
+	<field name="micromotores_estado" class="java.lang.String"/>
+	<field name="micromotores_fechaentrega" class="java.lang.String"/>
+	<field name="micromotores_inicioprogramado" class="java.lang.String"/>
+	<field name="micromotores_finprogramado" class="java.lang.String"/>
+	<field name="micromotores_avance" class="java.lang.String"/>
+	<field name="micromotores_fechareporte" class="java.lang.String"/>
+	<field name="micromotores_mesfacturacion" class="java.lang.String"/>
+	<field name="micromotores_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="a6a1d78a-3c50-49c7-a3ca-ae64666b2067"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="7848b264-91b2-4edb-b7ff-45c4db41a67e"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Micromotores]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#003399" uuid="dc377263-badb-42cd-adab-70c5f8298822"/>
+				<staticText>
+					<reportElement style="Column header" x="81" y="0" width="47" height="15" uuid="3c5b475a-a939-419d-82f7-10c482ee1052"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="220" y="0" width="47" height="15" uuid="668bd3b7-8211-45aa-8988-919913da25b8"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="287" y="0" width="18" height="15" uuid="e7ef6c91-052d-4b48-8cf3-a2d8bc5637b1"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="431" y="0" width="36" height="15" uuid="0f5f98fc-3c6f-4ca8-9662-8e75881e1f5e"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="536" y="0" width="88" height="15" uuid="303f1433-d6b7-4453-a0c7-5c309dfa4754"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="625" y="0" width="90" height="15" uuid="be002822-3deb-4b7f-b037-f27bdfefc057"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="719" y="0" width="35" height="15" uuid="25e4e172-59f4-4cf2-81a3-4e199e54742e"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="787" y="0" width="47" height="15" uuid="14302546-daea-4851-8333-48924c821cf3"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="850" y="0" width="87" height="15" uuid="203162bb-1ae3-41bf-999b-e1a97cf2339d"/>
+					<text><![CDATA[Fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="935" y="0" width="62" height="15" uuid="04a2485a-6fdd-431d-b492-0cf2ab9790f2"/>
+					<text><![CDATA[Inicio obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1011" y="0" width="59" height="15" uuid="a53f51b3-e284-4a2e-903e-8b65809e7663"/>
+					<text><![CDATA[Fin obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1070" y="0" width="47" height="15" uuid="b9bd9bc7-16ba-426e-8783-a6b87f582b4f"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1116" y="0" width="81" height="15" uuid="b25ff69a-c160-4323-b10c-2217cc012cc4"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1198" y="0" width="95" height="15" uuid="c06281a6-db2a-4873-943c-29963959835b"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1292" y="0" width="66" height="15" uuid="12c3948f-507c-4520-acfa-4c6890fbaf3d"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1360" height="15" uuid="2d2bea40-ff78-4adc-95df-295e619e7845"/>
+				<textField>
+					<reportElement style="Detail" x="8" y="0" width="199" height="15" uuid="40aaf625-36f8-46b4-94b8-bf5648263443"/>
+					<textFieldExpression><![CDATA[$F{micromotores_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="217" y="0" width="47" height="15" uuid="eac87580-1708-4509-b2f9-c3493bacce5f"/>
+					<textFieldExpression><![CDATA[$F{micromotores_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="269" y="0" width="47" height="15" uuid="bc9aca95-bfbe-4116-ac89-a1a31c13643b"/>
+					<textFieldExpression><![CDATA[$F{micromotores_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="318" y="0" width="215" height="15" uuid="3992364b-5c13-4442-bc2b-2880a744ac9a"/>
+					<textFieldExpression><![CDATA[$F{micromotores_tema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="536" y="0" width="86" height="15" uuid="71cceaa9-7f3c-4798-ab24-f422c01d1d30"/>
+					<textFieldExpression><![CDATA[$F{micromotores_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="626" y="0" width="85" height="15" uuid="4f192f8c-45a8-4625-b4ff-f8e2f7ae9019"/>
+					<textFieldExpression><![CDATA[$F{micromotores_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="713" y="0" width="47" height="15" uuid="af32fd9b-063a-4035-a7ea-345d993b0979"/>
+					<textFieldExpression><![CDATA[$F{micromotores_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="760" y="0" width="89" height="15" uuid="682090dd-6ecb-4be1-b8c2-16d4c832563d"/>
+					<textFieldExpression><![CDATA[$F{micromotores_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="852" y="0" width="82" height="15" uuid="ac322995-744e-4dbd-a0aa-4f4f723a3ff5"/>
+					<textFieldExpression><![CDATA[$F{micromotores_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="935" y="0" width="67" height="15" uuid="376eb7f3-36d1-4e1c-a791-e32e68649a40"/>
+					<textFieldExpression><![CDATA[$F{micromotores_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1003" y="0" width="75" height="15" uuid="4816131c-34ac-4a99-8213-f2a1da1536ab"/>
+					<textFieldExpression><![CDATA[$F{micromotores_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1077" y="0" width="47" height="15" uuid="7e94416f-fd5d-4550-8dec-793d8b41bea4"/>
+					<textFieldExpression><![CDATA[$F{micromotores_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1120" y="0" width="80" height="15" uuid="df421fcc-3eb0-40c6-8dde-6e846e8c75a8"/>
+					<textFieldExpression><![CDATA[$F{micromotores_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1198" y="0" width="94" height="15" uuid="3ae72283-ee04-451c-b231-3c36ec10e22d"/>
+					<textFieldExpression><![CDATA[$F{micromotores_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1292" y="0" width="66" height="15" uuid="cadcb020-c8e0-46d7-9af2-a18d7bb55260"/>
+					<textFieldExpression><![CDATA[$F{micromotores_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1360" height="1" uuid="1a7a199e-b06e-4ff7-aee0-52e864c2c08d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="4d0217fc-efa2-4ae9-81e9-b8a557c1768a"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="a4366483-118b-4904-9763-c9df8d26b4ae"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Micromotores]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report21" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="43beb273-2c77-4f15-9b06-026a80e30903">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     registrosrcfibraoptica.`central` AS registrosrcfibraoptica_central,
+     registrosrcfibraoptica.`distrito` AS registrosrcfibraoptica_distrito,
+     registrosrcfibraoptica.`pr` AS registrosrcfibraoptica_pr,
+     registrosrcfibraoptica.`tema` AS registrosrcfibraoptica_tema,
+     registrosrcfibraoptica.`costocontrato` AS registrosrcfibraoptica_costocontrato,
+     registrosrcfibraoptica.`costoproyecto` AS registrosrcfibraoptica_costoproyecto,
+     registrosrcfibraoptica.`pares` AS registrosrcfibraoptica_pares,
+     registrosrcfibraoptica.`estado` AS registrosrcfibraoptica_estado,
+     registrosrcfibraoptica.`fechaentrega` AS registrosrcfibraoptica_fechaentrega,
+     registrosrcfibraoptica.`inicioprogramado` AS registrosrcfibraoptica_inicioprogramado,
+     registrosrcfibraoptica.`finprogramado` AS registrosrcfibraoptica_finprogramado,
+     registrosrcfibraoptica.`avance` AS registrosrcfibraoptica_avance,
+     registrosrcfibraoptica.`fechareporte` AS registrosrcfibraoptica_fechareporte,
+     registrosrcfibraoptica.`mesfacturacion` AS registrosrcfibraoptica_mesfacturacion,
+     registrosrcfibraoptica.`contratista` AS registrosrcfibraoptica_contratista
+FROM
+     `registrosrcfibraoptica` registrosrcfibraoptica]]>
+	</queryString>
+	<field name="registrosrcfibraoptica_central" class="java.lang.String"/>
+	<field name="registrosrcfibraoptica_distrito" class="java.lang.Integer"/>
+	<field name="registrosrcfibraoptica_pr" class="java.lang.Integer"/>
+	<field name="registrosrcfibraoptica_tema" class="java.lang.String"/>
+	<field name="registrosrcfibraoptica_costocontrato" class="java.lang.Integer"/>
+	<field name="registrosrcfibraoptica_costoproyecto" class="java.lang.Integer"/>
+	<field name="registrosrcfibraoptica_pares" class="java.lang.Integer"/>
+	<field name="registrosrcfibraoptica_estado" class="java.lang.String"/>
+	<field name="registrosrcfibraoptica_fechaentrega" class="java.lang.String"/>
+	<field name="registrosrcfibraoptica_inicioprogramado" class="java.lang.String"/>
+	<field name="registrosrcfibraoptica_finprogramado" class="java.lang.String"/>
+	<field name="registrosrcfibraoptica_avance" class="java.lang.String"/>
+	<field name="registrosrcfibraoptica_fechareporte" class="java.lang.String"/>
+	<field name="registrosrcfibraoptica_mesfacturacion" class="java.lang.String"/>
+	<field name="registrosrcfibraoptica_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="abb1b011-3619-46e5-b74b-b673e05f3e45"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="6072c903-79ac-45a2-ae69-be4402082fb2"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Registros Rc Fibra Optica]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#0033CC" uuid="a409c831-7c48-4513-97a8-326b24333376"/>
+				<staticText>
+					<reportElement style="Column header" x="45" y="0" width="47" height="15" uuid="9e5933f7-5bcb-4469-9961-5faa8f1deace"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="141" y="0" width="47" height="15" uuid="79a427aa-a5d6-47b1-b8cb-a7c9f6d9880e"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="210" y="0" width="18" height="15" uuid="26939fe9-f53e-4b3a-bd57-7ea23545e584"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="332" y="0" width="34" height="15" uuid="3a2c7126-85f2-4c81-9c9a-928d66bab00d"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="465" y="0" width="87" height="15" uuid="5ebb5b8e-8197-4742-a387-b7596048a806"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="558" y="0" width="91" height="15" uuid="038a6c1f-e455-4766-8c4d-f0a60febe401"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="659" y="0" width="35" height="15" uuid="caadec28-8f1f-448e-b042-c68642ddaccd"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="737" y="0" width="47" height="15" uuid="8db0414b-c4e9-4a0e-9a2e-67af3deb90db"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="814" y="0" width="87" height="15" uuid="834383bd-2bd3-464d-91f4-ce7e6cd0c445"/>
+					<text><![CDATA[Fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="908" y="0" width="62" height="15" uuid="a3d9165c-b315-4a10-bc98-9ab49b72ef94"/>
+					<text><![CDATA[Inicio obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="993" y="0" width="49" height="15" uuid="6b650f97-2010-4b59-b66c-7839f0e4d39c"/>
+					<text><![CDATA[Fin obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1063" y="0" width="47" height="15" uuid="1b74932a-6468-4a47-8b68-b6f7ef3b00e8"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1110" y="0" width="83" height="15" uuid="e234f502-2ff3-4ef8-8f64-0be6a8dfd6b3"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1194" y="0" width="94" height="15" uuid="61f4e9f2-2dd6-4106-917a-391aa7561efd"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1290" y="0" width="68" height="15" uuid="0a830cb9-380a-4118-930f-d7ac7dd7e861"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1360" height="15" uuid="b6589908-737a-46b4-aba2-42730b172409"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="131" height="15" uuid="c67054fd-06e1-4fb4-bafc-bcd0e897e528"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="139" y="0" width="47" height="15" uuid="c64d60a0-6e2e-4847-b34f-9695bd719c8b"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="190" y="0" width="47" height="15" uuid="ad358ee5-edff-43d1-8e00-fd06b8692934"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="242" y="0" width="224" height="15" uuid="2d3e90f9-18c6-47ad-857b-31f44f54eafb"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_tema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="465" y="0" width="85" height="15" uuid="cd589508-412f-4985-be8d-a2361c349aaf"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="558" y="0" width="88" height="15" uuid="d1fb90fd-0c2a-4627-be73-a703735c3798"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="653" y="0" width="47" height="15" uuid="2fb9490b-25e0-42e1-9349-92a4e227f5aa"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="699" y="0" width="116" height="15" uuid="e5948125-2dc5-4207-86a1-1aef60df1b21"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="823" y="0" width="85" height="15" uuid="94e453e9-0907-4e2f-abc3-0c3fc4d67662"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="904" y="0" width="75" height="15" uuid="5a36b8f0-4693-440a-99a8-83e01de8c01b"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="985" y="0" width="75" height="15" uuid="44418b3e-82e1-40f5-a65c-2a756a1bd975"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1074" y="0" width="47" height="15" uuid="6b2b2376-3aa2-444e-be1b-f9120f26aea5"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1110" y="0" width="81" height="15" uuid="be2a8bef-55a8-4ccf-8346-32ea978f5f59"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1194" y="0" width="92" height="15" uuid="b8b05d2a-26fe-408e-8745-5060b447ac8f"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1290" y="0" width="65" height="15" uuid="6dc95e43-342d-4fa2-ad39-ddbe07ee5665"/>
+					<textFieldExpression><![CDATA[$F{registrosrcfibraoptica_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1360" height="1" uuid="57cad2e0-e43d-4891-9c8c-c59f71f00f5f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="63e7054f-7ecf-4c74-88bf-2660016da36c"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="c0a89195-e389-4880-8658-a91a69f5e457"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Registros Rc Fibra Optica]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

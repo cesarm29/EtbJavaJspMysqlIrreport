@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report16" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="25c8e56c-9746-492f-803a-f8455cd1d38f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     posteria.`central` AS posteria_central,
+     posteria.`distrito` AS posteria_distrito,
+     posteria.`pr` AS posteria_pr,
+     posteria.`tema` AS posteria_tema,
+     posteria.`costocontrato` AS posteria_costocontrato,
+     posteria.`costoproyecto` AS posteria_costoproyecto,
+     posteria.`pares` AS posteria_pares,
+     posteria.`estado` AS posteria_estado,
+     posteria.`fechaentrega` AS posteria_fechaentrega,
+     posteria.`inicioprogramado` AS posteria_inicioprogramado,
+     posteria.`finprogramado` AS posteria_finprogramado,
+     posteria.`avance` AS posteria_avance,
+     posteria.`fechareporte` AS posteria_fechareporte,
+     posteria.`mesfacturacion` AS posteria_mesfacturacion,
+     posteria.`contratista` AS posteria_contratista
+FROM
+     `posteria` posteria]]>
+	</queryString>
+	<field name="posteria_central" class="java.lang.String"/>
+	<field name="posteria_distrito" class="java.lang.Integer"/>
+	<field name="posteria_pr" class="java.lang.Integer"/>
+	<field name="posteria_tema" class="java.lang.String"/>
+	<field name="posteria_costocontrato" class="java.lang.Integer"/>
+	<field name="posteria_costoproyecto" class="java.lang.Integer"/>
+	<field name="posteria_pares" class="java.lang.Integer"/>
+	<field name="posteria_estado" class="java.lang.String"/>
+	<field name="posteria_fechaentrega" class="java.lang.String"/>
+	<field name="posteria_inicioprogramado" class="java.lang.String"/>
+	<field name="posteria_finprogramado" class="java.lang.String"/>
+	<field name="posteria_avance" class="java.lang.String"/>
+	<field name="posteria_fechareporte" class="java.lang.String"/>
+	<field name="posteria_mesfacturacion" class="java.lang.String"/>
+	<field name="posteria_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="66a0a1b0-ce0d-4cb2-a5f1-20a00cebc2f6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="0fe677e1-bd70-492e-b424-40d20ceb786f"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Posteria]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#003399" uuid="48bc5230-2565-4f05-a38c-c63b77208695"/>
+				<staticText>
+					<reportElement style="Column header" x="66" y="0" width="47" height="15" uuid="3b6a81ac-60c1-496f-b3d7-f6623f53e3ee"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="185" y="0" width="47" height="15" uuid="39b97be0-4714-4b67-a881-e3c19820fbec"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="256" y="0" width="18" height="15" uuid="59cc5b94-65a9-49cd-b4cb-101804bd96fc"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="409" y="0" width="34" height="15" uuid="f7b2277c-a0dc-467f-b21c-e94ab1aa9c8b"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="521" y="0" width="86" height="15" uuid="552ce189-c955-49eb-8262-9f5e74b0b80e"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="609" y="0" width="90" height="15" uuid="d7370001-5989-46b3-a20b-baca2a464172"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="706" y="0" width="36" height="15" uuid="f6e3710c-b49b-412f-8649-ff7b7e81bcb5"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="774" y="0" width="47" height="15" uuid="2ad5e817-cfee-4e23-af6f-5bac7e999e6b"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="837" y="0" width="85" height="15" uuid="bab71979-ce22-4124-8e00-be7edb173b0b"/>
+					<text><![CDATA[Fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="929" y="0" width="63" height="15" uuid="14b628f8-0f2e-429c-b04c-ad13bc07ee1d"/>
+					<text><![CDATA[Inicio obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1011" y="0" width="60" height="15" uuid="97a07258-ccaf-49a8-a6bc-9f3501c95322"/>
+					<text><![CDATA[Fin obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1070" y="0" width="47" height="15" uuid="d5b93df9-b093-474f-8c12-819461f96eb0"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1116" y="0" width="81" height="15" uuid="09ff3cd6-e7c9-41c7-a44d-e96c63861b34"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1197" y="0" width="95" height="15" uuid="7a11169d-bf3b-4ae9-80b6-4e37463efda4"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1292" y="0" width="68" height="15" uuid="43d7562f-f4ec-4069-8652-6ebcd7d3c04c"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1360" height="15" uuid="b6c950b4-04dd-4024-bda7-63a45f11b37d"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="185" height="15" uuid="f8e3c3e1-0f38-4e7b-8875-19bb5323e410"/>
+					<textFieldExpression><![CDATA[$F{posteria_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="186" y="0" width="47" height="15" uuid="5506945d-e7cd-4a85-96e1-68a0c29e535f"/>
+					<textFieldExpression><![CDATA[$F{posteria_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="237" y="0" width="47" height="15" uuid="2800f0cf-4426-4e02-aaa4-fb0fa3b04a37"/>
+					<textFieldExpression><![CDATA[$F{posteria_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="287" y="0" width="233" height="15" uuid="51839bf8-5d9a-415a-9bb5-2df52a8f6901"/>
+					<textFieldExpression><![CDATA[$F{posteria_tema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="521" y="0" width="83" height="15" uuid="26e4736b-6e92-4766-b765-ee18d295a414"/>
+					<textFieldExpression><![CDATA[$F{posteria_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="608" y="0" width="92" height="15" uuid="73ee8a6b-c639-4909-afe7-aac84638d672"/>
+					<textFieldExpression><![CDATA[$F{posteria_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="702" y="0" width="47" height="15" uuid="35fcd9ce-93bc-477f-aca0-942faf81a70d"/>
+					<textFieldExpression><![CDATA[$F{posteria_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="746" y="0" width="88" height="15" uuid="977fcc3e-e405-4334-a0bf-dbab05bf2343"/>
+					<textFieldExpression><![CDATA[$F{posteria_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="837" y="0" width="85" height="15" uuid="d2bd2061-45ea-45cc-a1ff-43aaec292899"/>
+					<textFieldExpression><![CDATA[$F{posteria_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="925" y="0" width="72" height="15" uuid="a0deb1e0-fbcd-4c94-a7e5-5f92656ba841"/>
+					<textFieldExpression><![CDATA[$F{posteria_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1002" y="0" width="72" height="15" uuid="e25e0de9-2f9f-4c14-bd98-a53241f298b4"/>
+					<textFieldExpression><![CDATA[$F{posteria_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1080" y="0" width="47" height="15" uuid="f82e4c4c-cf12-4b4d-aa63-7d4f597a660f"/>
+					<textFieldExpression><![CDATA[$F{posteria_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1116" y="0" width="80" height="15" uuid="2a3b8c42-205b-4c13-aa76-a50ca0509ae9"/>
+					<textFieldExpression><![CDATA[$F{posteria_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1197" y="0" width="94" height="15" uuid="f796fec5-ce7f-4b2e-ace7-db71cadfb5b6"/>
+					<textFieldExpression><![CDATA[$F{posteria_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1292" y="0" width="67" height="15" uuid="e4314160-3613-4af7-8952-c953e5c8959d"/>
+					<textFieldExpression><![CDATA[$F{posteria_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1360" height="1" uuid="c2be12f2-c0b1-49fb-acda-803868d614dc"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="69a73f45-17b3-4850-a0d3-218f18d163b1"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="0720807c-fb94-4d87-ad7d-1050f7ebc126"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Posteria]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

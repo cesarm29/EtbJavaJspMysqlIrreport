@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report6" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="d99c02ea-c904-438f-92c6-703251eae1d8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     canalizacion.`central` AS canalizacion_central,
+     canalizacion.`distrito` AS canalizacion_distrito,
+     canalizacion.`pr` AS canalizacion_pr,
+     canalizacion.`tema` AS canalizacion_tema,
+     canalizacion.`costocontrato` AS canalizacion_costocontrato,
+     canalizacion.`costoproyecto` AS canalizacion_costoproyecto,
+     canalizacion.`pares` AS canalizacion_pares,
+     canalizacion.`estado` AS canalizacion_estado,
+     canalizacion.`fechaentrega` AS canalizacion_fechaentrega,
+     canalizacion.`inicioprogramado` AS canalizacion_inicioprogramado,
+     canalizacion.`finprogramado` AS canalizacion_finprogramado,
+     canalizacion.`avance` AS canalizacion_avance,
+     canalizacion.`fechareporte` AS canalizacion_fechareporte,
+     canalizacion.`mesfacturacion` AS canalizacion_mesfacturacion,
+     canalizacion.`contratista` AS canalizacion_contratista
+FROM
+     `canalizacion` canalizacion]]>
+	</queryString>
+	<field name="canalizacion_central" class="java.lang.String"/>
+	<field name="canalizacion_distrito" class="java.lang.Integer"/>
+	<field name="canalizacion_pr" class="java.lang.Integer"/>
+	<field name="canalizacion_tema" class="java.lang.String"/>
+	<field name="canalizacion_costocontrato" class="java.lang.Integer"/>
+	<field name="canalizacion_costoproyecto" class="java.lang.Integer"/>
+	<field name="canalizacion_pares" class="java.lang.Integer"/>
+	<field name="canalizacion_estado" class="java.lang.String"/>
+	<field name="canalizacion_fechaentrega" class="java.lang.String"/>
+	<field name="canalizacion_inicioprogramado" class="java.lang.String"/>
+	<field name="canalizacion_finprogramado" class="java.lang.String"/>
+	<field name="canalizacion_avance" class="java.lang.String"/>
+	<field name="canalizacion_fechareporte" class="java.lang.String"/>
+	<field name="canalizacion_mesfacturacion" class="java.lang.String"/>
+	<field name="canalizacion_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="8401cd5f-e9ca-4e1e-a930-6398f8bf3c4f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="85ad021c-0b7f-46d1-a90c-2809ac88936e"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Canalizacion]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#003399" uuid="2b434166-5d2e-4dc4-a9ea-613d3b794cbe"/>
+				<staticText>
+					<reportElement style="Column header" x="59" y="0" width="43" height="15" uuid="487e0a28-5f90-42c4-8a55-990c0d5dc05c"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="183" y="0" width="47" height="15" uuid="91e7183c-1b24-4a7b-8f92-d28f521b175d"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="248" y="0" width="20" height="15" uuid="3b6dd25f-1b42-4b0c-9a00-48ade166653a"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="377" y="0" width="35" height="15" uuid="b9de9f97-54e6-4774-bf92-6e9a43deb1b7"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="501" y="0" width="89" height="15" uuid="3755b502-7411-434f-8e61-367dd0f43d0e"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="595" y="0" width="90" height="15" uuid="fde87aee-8764-4ee7-9cb9-c491c55f46e7"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="691" y="0" width="35" height="15" uuid="dea7477b-e156-4d77-a13f-460008504f8a"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="754" y="0" width="41" height="15" uuid="86289616-3deb-4c26-b94e-172c9f6ffaaf"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="827" y="0" width="85" height="15" uuid="32462265-4681-4f12-be61-c2fa2f4e8487"/>
+					<text><![CDATA[Fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="919" y="0" width="63" height="15" uuid="fe2e9277-64e3-44b5-9392-42c8ee47be4d"/>
+					<text><![CDATA[Inicio obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="994" y="0" width="58" height="15" uuid="1e2b20b1-271b-4a9b-bf3c-66faadd2ad00"/>
+					<text><![CDATA[Fin obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1055" y="0" width="47" height="15" uuid="65b48b7c-859e-47a0-b2f1-8eb8911cfab1"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1105" y="0" width="84" height="15" uuid="38e29413-a6ac-4ca9-a545-0029f5c58eaf"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1187" y="0" width="96" height="15" uuid="e235d9d0-3e6a-49e7-9e05-af6dde9671cb"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1283" y="0" width="68" height="15" uuid="1c1f6897-ccb4-456c-a10e-4947a5da3239"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1360" height="15" uuid="2b4c474b-31b0-4775-8766-86272ecb5a46"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="173" height="15" uuid="0f620353-2506-446e-9643-81283ffaac28"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="180" y="0" width="47" height="15" uuid="c919fbf5-fe77-4180-aa5e-58cd67eca897"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="231" y="0" width="47" height="15" uuid="9651f92c-c370-44b6-ab3d-ead978e5a816"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="282" y="0" width="217" height="15" uuid="5221a9c5-f84a-4edc-b758-b32c9c0b5491"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_tema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="501" y="0" width="93" height="15" uuid="9135a4c0-0b40-456f-9baa-19dfdde87b1f"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="594" y="0" width="87" height="15" uuid="9b4c7b9a-f5d0-4b34-970c-2a606fe21c0d"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="685" y="0" width="47" height="15" uuid="320a7a0f-a295-4474-8e9d-b309f5e8b2d5"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="732" y="0" width="90" height="15" uuid="f9460bef-9660-427a-82c5-f09f114cefea"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="832" y="0" width="84" height="15" uuid="0c13d502-a3d2-4d83-a370-1ea59481a451"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="919" y="0" width="63" height="15" uuid="9a5c3f31-a413-455b-8867-eb0f467577de"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="990" y="0" width="63" height="15" uuid="a068adc1-550c-4a4b-8b14-bb19fbaae23f"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1061" y="0" width="47" height="15" uuid="2879e067-461b-4ca9-9026-0ede9670045d"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1105" y="0" width="80" height="15" uuid="8e93281b-e812-4f37-a01b-a30707c08e27"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1188" y="0" width="94" height="15" uuid="631c7f43-be87-407d-8634-dbb1d50b289e"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1283" y="0" width="76" height="15" uuid="05026a59-5328-429a-a30e-4da28b1ce978"/>
+					<textFieldExpression><![CDATA[$F{canalizacion_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1360" height="1" uuid="3b52300c-9ee4-4e7b-9f9b-f3a3bb360cb8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="f569f1ac-4c91-4d49-ac18-8e1a3b2c6f57"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="988cbdef-ac58-454c-b049-dfb3ebf66f32"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Canalizacion]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

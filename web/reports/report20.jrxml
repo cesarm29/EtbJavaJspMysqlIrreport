@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report20" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="963386cc-1c44-49d9-85f3-4eba82e4f83f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     regionalesbase.`central` AS regionalesbase_central,
+     regionalesbase.`distrito` AS regionalesbase_distrito,
+     regionalesbase.`pr` AS regionalesbase_pr,
+     regionalesbase.`tema` AS regionalesbase_tema,
+     regionalesbase.`costocontrato` AS regionalesbase_costocontrato,
+     regionalesbase.`costoproyecto` AS regionalesbase_costoproyecto,
+     regionalesbase.`pares` AS regionalesbase_pares,
+     regionalesbase.`estado` AS regionalesbase_estado,
+     regionalesbase.`fechaentrega` AS regionalesbase_fechaentrega,
+     regionalesbase.`inicioprogramado` AS regionalesbase_inicioprogramado,
+     regionalesbase.`finprogramado` AS regionalesbase_finprogramado,
+     regionalesbase.`avance` AS regionalesbase_avance,
+     regionalesbase.`fechareporte` AS regionalesbase_fechareporte,
+     regionalesbase.`mesfacturacion` AS regionalesbase_mesfacturacion,
+     regionalesbase.`contratista` AS regionalesbase_contratista
+FROM
+     `regionalesbase` regionalesbase]]>
+	</queryString>
+	<field name="regionalesbase_central" class="java.lang.String"/>
+	<field name="regionalesbase_distrito" class="java.lang.Integer"/>
+	<field name="regionalesbase_pr" class="java.lang.Integer"/>
+	<field name="regionalesbase_tema" class="java.lang.String"/>
+	<field name="regionalesbase_costocontrato" class="java.lang.Integer"/>
+	<field name="regionalesbase_costoproyecto" class="java.lang.Integer"/>
+	<field name="regionalesbase_pares" class="java.lang.Integer"/>
+	<field name="regionalesbase_estado" class="java.lang.String"/>
+	<field name="regionalesbase_fechaentrega" class="java.lang.String"/>
+	<field name="regionalesbase_inicioprogramado" class="java.lang.String"/>
+	<field name="regionalesbase_finprogramado" class="java.lang.String"/>
+	<field name="regionalesbase_avance" class="java.lang.String"/>
+	<field name="regionalesbase_fechareporte" class="java.lang.String"/>
+	<field name="regionalesbase_mesfacturacion" class="java.lang.String"/>
+	<field name="regionalesbase_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="5c17e617-ff83-45a1-bfca-8f4d0b99a2f3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="5e14707e-bc56-4e3f-9088-116415312055"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Regionales Base]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#003399" uuid="c2f45dc4-f7a8-4147-82fd-05215aa1df4f"/>
+				<staticText>
+					<reportElement style="Column header" x="50" y="0" width="47" height="15" uuid="57773e90-8f5e-4002-9fdd-d62d7b355cd0"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="156" y="0" width="47" height="15" uuid="f2ac8e07-c020-4d29-964f-29bbeccd87e7"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="230" y="0" width="21" height="15" uuid="e7fa6449-4804-42f0-b011-7153cd973240"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="378" y="0" width="34" height="15" uuid="e7f72a69-c0cf-4e78-adeb-dffc44fe14da"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="494" y="0" width="87" height="15" uuid="41e77ce0-f7af-4f3a-9052-951d5e39d4e5"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="589" y="0" width="89" height="15" uuid="d2df0972-09f2-47d9-aa85-2618dfbceb71"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="688" y="0" width="36" height="15" uuid="4c504ccc-b316-48f0-98f6-9ed9161aa5c7"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="754" y="0" width="47" height="15" uuid="be96f984-6072-442a-a14f-90aa8ddfaf42"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="820" y="0" width="86" height="15" uuid="2b74c9cc-f844-43f6-a1da-2e9d68f285f2"/>
+					<text><![CDATA[Fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="907" y="0" width="67" height="15" uuid="5bf97652-256a-47fb-b677-2bbee7036b0f"/>
+					<text><![CDATA[Inicio obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="994" y="0" width="58" height="15" uuid="4d4bb214-0983-485d-b475-78f4a2f62e23"/>
+					<text><![CDATA[Fin obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1067" y="0" width="47" height="15" uuid="1eef60a9-331a-4f81-a43e-1c9e79ad6ef5"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1114" y="0" width="80" height="15" uuid="24fc71cb-ee07-490c-8629-3763bcd76b32"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1196" y="0" width="99" height="15" uuid="86a58dcf-17e2-4928-ab05-4810ed5fa2a4"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1292" y="0" width="64" height="15" uuid="fd0037ca-b956-4dec-a1a1-1e7695f12c7a"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1360" height="15" uuid="7f9448d6-a672-498f-93d6-b6e6673be665"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="152" height="15" uuid="87808f91-a978-4910-87ff-4ac6541b4f10"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="159" y="0" width="47" height="15" uuid="f6396d78-fef0-46d0-9a61-0e74ad5d8e57"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="212" y="0" width="47" height="15" uuid="42a32e1c-5295-4909-9ab4-85ffe7ad470b"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="262" y="0" width="228" height="15" uuid="aad357e6-74a2-454b-84bb-678a89631bdb"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_tema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="494" y="0" width="84" height="15" uuid="162b1f9a-63a4-49f2-9c65-0617264dba72"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="589" y="0" width="88" height="15" uuid="ff36d008-b506-443d-b133-ab080132d319"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="683" y="0" width="47" height="15" uuid="c675fdac-ced6-4537-9c34-07191c04f360"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="730" y="0" width="88" height="15" uuid="54fa0d40-ffef-49a7-920c-0a04d61a4d8b"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="825" y="0" width="83" height="15" uuid="0b87e816-de16-46b2-8d5c-ca908f62b723"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="904" y="0" width="80" height="15" uuid="4ce644c6-86bf-463f-ab79-c2638baac17e"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="985" y="0" width="78" height="15" uuid="36b00dd4-03f1-49d9-a01c-2430392968c7"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1078" y="0" width="47" height="15" uuid="38e88ca3-a641-4961-a035-6dc9624bf09f"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1119" y="0" width="78" height="15" uuid="586fc870-7b00-4dc9-9ffc-8eb7f330c2e0"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1196" y="0" width="95" height="15" uuid="e03dd6dc-393b-4b80-95d7-55b37305d830"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1292" y="0" width="63" height="15" uuid="d7f73dc3-fd13-464f-8130-3b01d64a22b9"/>
+					<textFieldExpression><![CDATA[$F{regionalesbase_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1360" height="1" uuid="d4c495e1-b363-47c9-8c1e-b723149b8cde"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="3ccac072-c360-4afa-b482-f05545814f3f"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="286265d8-0def-4d2a-9b61-96e3165c8445"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Regionales Base]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

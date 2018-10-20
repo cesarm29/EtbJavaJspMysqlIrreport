@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report9" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="a73a7480-5d5d-4e0e-be43-57286af213bf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     mantenimientocanalizacionbogota.`central` AS mantenimientocanalizacionbogota_central,
+     mantenimientocanalizacionbogota.`distrito` AS mantenimientocanalizacionbogota_distrito,
+     mantenimientocanalizacionbogota.`pr` AS mantenimientocanalizacionbogota_pr,
+     mantenimientocanalizacionbogota.`tema` AS mantenimientocanalizacionbogota_tema,
+     mantenimientocanalizacionbogota.`costocontrato` AS mantenimientocanalizacionbogota_costocontrato,
+     mantenimientocanalizacionbogota.`costoproyecto` AS mantenimientocanalizacionbogota_costoproyecto,
+     mantenimientocanalizacionbogota.`pares` AS mantenimientocanalizacionbogota_pares,
+     mantenimientocanalizacionbogota.`estado` AS mantenimientocanalizacionbogota_estado,
+     mantenimientocanalizacionbogota.`fechaentrega` AS mantenimientocanalizacionbogota_fechaentrega,
+     mantenimientocanalizacionbogota.`inicioprogramado` AS mantenimientocanalizacionbogota_inicioprogramado,
+     mantenimientocanalizacionbogota.`finprogramado` AS mantenimientocanalizacionbogota_finprogramado,
+     mantenimientocanalizacionbogota.`avance` AS mantenimientocanalizacionbogota_avance,
+     mantenimientocanalizacionbogota.`fechareporte` AS mantenimientocanalizacionbogota_fechareporte,
+     mantenimientocanalizacionbogota.`mesfacturacion` AS mantenimientocanalizacionbogota_mesfacturacion,
+     mantenimientocanalizacionbogota.`contratista` AS mantenimientocanalizacionbogota_contratista
+FROM
+     `mantenimientocanalizacionbogota` mantenimientocanalizacionbogota]]>
+	</queryString>
+	<field name="mantenimientocanalizacionbogota_central" class="java.lang.String"/>
+	<field name="mantenimientocanalizacionbogota_distrito" class="java.lang.Integer"/>
+	<field name="mantenimientocanalizacionbogota_pr" class="java.lang.Integer"/>
+	<field name="mantenimientocanalizacionbogota_tema" class="java.lang.String"/>
+	<field name="mantenimientocanalizacionbogota_costocontrato" class="java.lang.Integer"/>
+	<field name="mantenimientocanalizacionbogota_costoproyecto" class="java.lang.Integer"/>
+	<field name="mantenimientocanalizacionbogota_pares" class="java.lang.Integer"/>
+	<field name="mantenimientocanalizacionbogota_estado" class="java.lang.String"/>
+	<field name="mantenimientocanalizacionbogota_fechaentrega" class="java.lang.String"/>
+	<field name="mantenimientocanalizacionbogota_inicioprogramado" class="java.lang.String"/>
+	<field name="mantenimientocanalizacionbogota_finprogramado" class="java.lang.String"/>
+	<field name="mantenimientocanalizacionbogota_avance" class="java.lang.String"/>
+	<field name="mantenimientocanalizacionbogota_fechareporte" class="java.lang.String"/>
+	<field name="mantenimientocanalizacionbogota_mesfacturacion" class="java.lang.String"/>
+	<field name="mantenimientocanalizacionbogota_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="490eccf1-a245-48b5-b079-81e6d695eedf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="054ef531-4995-4564-b040-6bcdc0fe7d50"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Mantenimiento Canalizacion Bogota]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#003399" uuid="9386b3cf-8af1-4ade-936c-1a32e5a18984"/>
+				<staticText>
+					<reportElement style="Column header" x="73" y="0" width="47" height="15" uuid="5fe05866-b345-49bf-bcd9-8149ac568b67"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="184" y="0" width="47" height="15" uuid="84924f9d-2f01-4c32-8cdd-9dfb05d9fb74"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="250" y="0" width="21" height="15" uuid="a9a543bb-4581-4b31-ae5b-197ee4d7ef6f"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="379" y="0" width="36" height="15" uuid="aa07ae8c-0dc4-482e-b129-33c7323949fe"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="507" y="0" width="87" height="15" uuid="43e44b0d-dbe0-482f-823c-6ef5798237f6"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="599" y="0" width="89" height="15" uuid="b59375a0-cea2-4ed1-9705-4c56a65f26a7"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="697" y="0" width="36" height="15" uuid="da57a931-243b-4534-a4f9-806885d2a965"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="763" y="0" width="47" height="15" uuid="b9d4daf2-f2bb-4e7f-b450-ba4f76bd0846"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="837" y="0" width="83" height="15" uuid="fbe26b40-11c2-4f42-85f7-77dd47764de5"/>
+					<text><![CDATA[Fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="929" y="0" width="63" height="15" uuid="864ba171-b1b5-4226-b425-da2a657b130c"/>
+					<text><![CDATA[Inicio obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1005" y="0" width="59" height="15" uuid="60752cb9-f568-446d-8eb4-7366c73ea7c3"/>
+					<text><![CDATA[Fin obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1066" y="0" width="47" height="15" uuid="2ac84cb1-a5d7-4bd0-9120-6757e160c20e"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1111" y="0" width="83" height="15" uuid="1f4afb8e-226f-415f-988f-bca9c0b9ed4d"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1196" y="0" width="96" height="15" uuid="481f7c68-ae5c-4aa8-9208-ad422801fb15"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1291" y="0" width="67" height="15" uuid="d027e4da-2136-4915-810e-e0d555506f21"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1360" height="15" uuid="11c4a66a-b7dd-4995-b90a-20c6f086e3ae"/>
+				<textField>
+					<reportElement style="Detail" x="10" y="0" width="172" height="15" uuid="eb03f3a0-4900-4220-a2ca-60fb234037a3"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="182" y="0" width="47" height="15" uuid="8a706809-c98b-458d-af61-fb8c3b1610f7"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="232" y="0" width="47" height="15" uuid="b31f8220-5715-485e-9766-ee11456ed150"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="509" y="0" width="87" height="15" uuid="3752606d-557e-45f3-8ac4-847152b284ca"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="600" y="0" width="88" height="15" uuid="c0fcb150-58da-4746-b38e-ad16dfdfafe4"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="696" y="0" width="42" height="15" uuid="24bd89a3-201c-4fc8-8e01-9eac3d89fa81"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="738" y="0" width="100" height="15" uuid="c67af520-b5c8-4bbf-8135-b75767d77527"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="844" y="0" width="79" height="15" uuid="0745b8b3-bde0-4816-91eb-02a0896a194e"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="929" y="0" width="67" height="15" uuid="683200fc-a93a-498c-ae2e-35ddf5fbb208"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="997" y="0" width="69" height="15" uuid="e2d22d87-3161-42bd-94e2-7ea2ebbdde92"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1073" y="0" width="38" height="15" uuid="81dae67e-aaac-4ac5-af0b-3580d84430d3"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1114" y="0" width="82" height="15" uuid="804803ca-a9a5-449e-b7e3-ecd7bd885477"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1196" y="0" width="94" height="15" uuid="d6885f22-9480-4ebf-bb22-18eb66cfd404"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1291" y="0" width="68" height="15" uuid="4d96b5d2-71d7-4c00-980e-53c5282158d6"/>
+					<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1360" height="1" uuid="b109d198-f005-4333-8126-e01f1ed787d4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="282" y="1" width="222" height="15" uuid="53599ee0-bfa1-430c-b75b-bf55555e77cd"/>
+				<textFieldExpression><![CDATA[$F{mantenimientocanalizacionbogota_tema}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="362af83d-2867-4e43-9ca5-6b65e6e4be7b"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="36a46ff9-ecea-4132-b819-97f32ebeeaa4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Mantenimiento Canalizacion Bogota]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

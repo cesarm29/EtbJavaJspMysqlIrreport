@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report3" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="a29210e1-bdd8-4a12-b940-2806859d5aab">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="206"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     armarios.`central` AS armarios_central,
+     armarios.`distrito` AS armarios_distrito,
+     armarios.`pr` AS armarios_pr,
+     armarios.`tema` AS armarios_tema,
+     armarios.`costocontrato` AS armarios_costocontrato,
+     armarios.`costoproyecto` AS armarios_costoproyecto,
+     armarios.`pares` AS armarios_pares,
+     armarios.`estado` AS armarios_estado,
+     armarios.`fechaentrega` AS armarios_fechaentrega,
+     armarios.`inicioprogramado` AS armarios_inicioprogramado,
+     armarios.`finprogramado` AS armarios_finprogramado,
+     armarios.`avance` AS armarios_avance,
+     armarios.`fechareporte` AS armarios_fechareporte,
+     armarios.`mesfacturacion` AS armarios_mesfacturacion,
+     armarios.`contratista` AS armarios_contratista
+FROM
+     `armarios` armarios]]>
+	</queryString>
+	<field name="armarios_central" class="java.lang.String"/>
+	<field name="armarios_distrito" class="java.lang.Integer"/>
+	<field name="armarios_pr" class="java.lang.Integer"/>
+	<field name="armarios_tema" class="java.lang.String"/>
+	<field name="armarios_costocontrato" class="java.lang.Integer"/>
+	<field name="armarios_costoproyecto" class="java.lang.Integer"/>
+	<field name="armarios_pares" class="java.lang.Integer"/>
+	<field name="armarios_estado" class="java.lang.String"/>
+	<field name="armarios_fechaentrega" class="java.lang.String"/>
+	<field name="armarios_inicioprogramado" class="java.lang.String"/>
+	<field name="armarios_finprogramado" class="java.lang.String"/>
+	<field name="armarios_avance" class="java.lang.String"/>
+	<field name="armarios_fechareporte" class="java.lang.String"/>
+	<field name="armarios_mesfacturacion" class="java.lang.String"/>
+	<field name="armarios_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="7a42b4dc-916d-4f87-896d-df844b302369"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="a133a89b-fe0e-4db8-9c19-29f9fada9d95"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Armarios]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#003399" uuid="0848bb43-ceb4-4498-a781-2cec70466438"/>
+				<staticText>
+					<reportElement style="Column header" x="58" y="0" width="47" height="15" uuid="614c0652-c0e6-4ecc-96d3-438d2da7d327"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="177" y="0" width="47" height="15" uuid="e12ba5f7-6980-4f10-9f1f-624d034a5f80"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="248" y="0" width="17" height="15" uuid="d9788afc-b6b7-4d37-a874-88a3aa6f14cc"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="370" y="0" width="33" height="15" uuid="9b7d297a-c6da-4f41-87b3-acf9c7fab8b3"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="505" y="0" width="86" height="15" uuid="a0fe2e67-a133-407d-8b7b-4dd6505d2e13"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="595" y="0" width="90" height="15" uuid="edce86b9-c9ee-4cb5-90f9-0a930b4b5587"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="691" y="0" width="34" height="15" uuid="1a062e19-c4d9-4f47-bcb0-7bf77b817f67"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="754" y="0" width="47" height="15" uuid="00083c90-a066-43b6-ba08-6ed834c1e3f3"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="823" y="0" width="84" height="15" uuid="e1dd8a69-e5e7-494b-89ff-5137b9175497"/>
+					<text><![CDATA[Fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="913" y="0" width="63" height="15" uuid="38fbad01-7500-47e9-81ce-b428c1ad6f8c"/>
+					<text><![CDATA[Inicio obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="990" y="0" width="48" height="15" uuid="2df078e6-1a6e-4a1e-9bce-c01808a926ad"/>
+					<text><![CDATA[Fin obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1053" y="0" width="46" height="15" uuid="28120ce2-60b2-450a-a4b1-d986527cab97"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1107" y="0" width="81" height="15" uuid="bbe833c4-7912-43fd-88ab-dd5a8f313fb4"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1191" y="0" width="95" height="15" uuid="c5da932d-2936-42e9-90d6-323c738b362f"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1291" y="0" width="68" height="15" uuid="b9acafd8-4312-4d6d-ab8c-a55c10b1c67b"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1360" height="15" uuid="730b6587-6201-4d5b-9281-d2d36ed1766e"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="177" height="15" uuid="c9dfb5d9-4cc6-4710-8914-cf0a218e1ad8"/>
+					<textFieldExpression><![CDATA[$F{armarios_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="177" y="0" width="50" height="15" uuid="75dba4bf-1777-4337-9727-fac931c59cee"/>
+					<textFieldExpression><![CDATA[$F{armarios_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="232" y="0" width="47" height="15" uuid="d1a5b0fa-5496-49d0-b9f9-ebe066f1f625"/>
+					<textFieldExpression><![CDATA[$F{armarios_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="279" y="0" width="226" height="15" uuid="daf07acb-914d-4147-ab46-c9b919f5475d"/>
+					<textFieldExpression><![CDATA[$F{armarios_tema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="509" y="0" width="87" height="15" uuid="6e81bcdb-3804-45b9-92c7-46272f83eab5"/>
+					<textFieldExpression><![CDATA[$F{armarios_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="600" y="0" width="86" height="15" uuid="9a4d91c2-ad85-4ee7-9916-975340e2a415"/>
+					<textFieldExpression><![CDATA[$F{armarios_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="687" y="0" width="47" height="15" uuid="ff341d12-1857-434e-a473-2f9f3154939a"/>
+					<textFieldExpression><![CDATA[$F{armarios_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="735" y="0" width="91" height="15" uuid="e40111d3-6b37-41d1-9205-bba1fdbda037"/>
+					<textFieldExpression><![CDATA[$F{armarios_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="827" y="0" width="83" height="15" uuid="0085b22b-3dd2-4c8a-8290-403e4218af42"/>
+					<textFieldExpression><![CDATA[$F{armarios_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="910" y="0" width="70" height="15" uuid="64421826-c474-4b7d-b489-32ce79a3614a"/>
+					<textFieldExpression><![CDATA[$F{armarios_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="981" y="0" width="70" height="15" uuid="61171885-69a6-44c2-8425-886e20ea5ff3"/>
+					<textFieldExpression><![CDATA[$F{armarios_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1059" y="0" width="47" height="15" uuid="0c1b4081-bcd8-4b9e-87e8-20f402d4a050"/>
+					<textFieldExpression><![CDATA[$F{armarios_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1110" y="0" width="82" height="15" uuid="525fa5b2-db9d-4494-9345-9843d0f82c45"/>
+					<textFieldExpression><![CDATA[$F{armarios_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1199" y="0" width="92" height="15" uuid="8b244969-b07b-4729-b251-0bfbe5d77437"/>
+					<textFieldExpression><![CDATA[$F{armarios_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1291" y="0" width="67" height="15" uuid="08f1301e-100a-4530-91b7-727a741a7cfb"/>
+					<textFieldExpression><![CDATA[$F{armarios_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1360" height="5" uuid="ae474e01-2f71-4628-b525-4c4669f1e490"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="425b29aa-ff50-486b-896f-f35e25738d66"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="e29057b1-0c51-4983-b786-699a7e3c9bb6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Armarios]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

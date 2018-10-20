@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report15" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="207ff5ae-d511-4574-8e42-eeba92a8ad14">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="23"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     organizacionredfttc.`central` AS organizacionredfttc_central,
+     organizacionredfttc.`distrito` AS organizacionredfttc_distrito,
+     organizacionredfttc.`pr` AS organizacionredfttc_pr,
+     organizacionredfttc.`tema` AS organizacionredfttc_tema,
+     organizacionredfttc.`costocontrato` AS organizacionredfttc_costocontrato,
+     organizacionredfttc.`costoproyecto` AS organizacionredfttc_costoproyecto,
+     organizacionredfttc.`pares` AS organizacionredfttc_pares,
+     organizacionredfttc.`estado` AS organizacionredfttc_estado,
+     organizacionredfttc.`fechaentrega` AS organizacionredfttc_fechaentrega,
+     organizacionredfttc.`inicioprogramado` AS organizacionredfttc_inicioprogramado,
+     organizacionredfttc.`finprogramado` AS organizacionredfttc_finprogramado,
+     organizacionredfttc.`avance` AS organizacionredfttc_avance,
+     organizacionredfttc.`fechareporte` AS organizacionredfttc_fechareporte,
+     organizacionredfttc.`mesfacturacion` AS organizacionredfttc_mesfacturacion,
+     organizacionredfttc.`contratista` AS organizacionredfttc_contratista
+FROM
+     `organizacionredfttc` organizacionredfttc]]>
+	</queryString>
+	<field name="organizacionredfttc_central" class="java.lang.String"/>
+	<field name="organizacionredfttc_distrito" class="java.lang.Integer"/>
+	<field name="organizacionredfttc_pr" class="java.lang.Integer"/>
+	<field name="organizacionredfttc_tema" class="java.lang.String"/>
+	<field name="organizacionredfttc_costocontrato" class="java.lang.Integer"/>
+	<field name="organizacionredfttc_costoproyecto" class="java.lang.Integer"/>
+	<field name="organizacionredfttc_pares" class="java.lang.Integer"/>
+	<field name="organizacionredfttc_estado" class="java.lang.String"/>
+	<field name="organizacionredfttc_fechaentrega" class="java.lang.String"/>
+	<field name="organizacionredfttc_inicioprogramado" class="java.lang.String"/>
+	<field name="organizacionredfttc_finprogramado" class="java.lang.String"/>
+	<field name="organizacionredfttc_avance" class="java.lang.String"/>
+	<field name="organizacionredfttc_fechareporte" class="java.lang.String"/>
+	<field name="organizacionredfttc_mesfacturacion" class="java.lang.String"/>
+	<field name="organizacionredfttc_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="ae4ab28d-83de-4125-a756-cd7ba0cd2167"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="ad62af17-b372-4595-bb6b-d30c260e770c"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Organizacion Red Fttc]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#003399" uuid="bdea46ab-53ad-4fbb-8879-278a42d82ae7"/>
+				<staticText>
+					<reportElement style="Column header" x="72" y="0" width="46" height="15" uuid="f1f22274-d3e0-4d94-abba-f943c03c5e74"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="197" y="0" width="45" height="15" uuid="a78ccf63-9220-472c-96e9-3d5033fe6d6d"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="268" y="0" width="16" height="15" uuid="38be429c-03c9-4c25-91bf-f45d64f72fbc"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="385" y="0" width="34" height="15" uuid="575f0d2a-da49-4518-b2aa-cf55f2f97fc7"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="534" y="0" width="87" height="15" uuid="f7c5f213-66d2-41f9-a0b6-13d49d864373"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="622" y="0" width="90" height="15" uuid="f285fa0e-c258-448b-93ef-4e337632cc4f"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="716" y="0" width="47" height="15" uuid="36722d0b-e166-4234-b749-f221ec166250"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="776" y="0" width="47" height="15" uuid="20b57329-f95a-476a-b89b-348eeefa37c1"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="839" y="0" width="85" height="15" uuid="f6d087bf-0c72-47e0-acb1-a17f08c6c81d"/>
+					<text><![CDATA[Fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="924" y="0" width="66" height="15" uuid="73ea6609-3b95-476d-81e8-4e82166d40f2"/>
+					<text><![CDATA[Inicio Obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1001" y="0" width="58" height="15" uuid="311b57bc-c892-4bce-a205-6f2302dfd3be"/>
+					<text><![CDATA[Fin Obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1069" y="0" width="47" height="15" uuid="74529027-7109-4c29-8e31-67fb108bcf74"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1115" y="0" width="84" height="15" uuid="d2bacb38-753a-431a-85f9-a3eb5015f811"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1197" y="0" width="94" height="15" uuid="1f7e2828-6d23-4217-b54b-4f0577d7e91e"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1292" y="0" width="66" height="15" uuid="ba6a8295-0c7d-4886-968a-03ed55cd6e85"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1360" height="15" uuid="d6a12033-b7f2-4a57-b57c-f343010e301c"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="186" height="15" uuid="4cc8d3c1-d2aa-4bae-aa7c-3bdfbd74a8df"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="193" y="0" width="47" height="15" uuid="8e24c2fb-3a6f-44b7-98c2-6575f0247be5"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="247" y="0" width="47" height="15" uuid="fe0b772a-5b8b-46fb-be2e-c699698dba70"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="297" y="0" width="237" height="15" uuid="c7de167c-5888-48d2-a10a-b9a19689b5e6"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_tema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="534" y="0" width="87" height="15" uuid="f7839f93-0871-435c-9127-c7f29bdf68e5"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="622" y="0" width="90" height="15" uuid="a9306b5c-c3c0-43f6-b376-c15bd01ca667"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="714" y="0" width="47" height="15" uuid="0351794b-a2ba-4a29-87e4-347f779e6a1c"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="756" y="0" width="83" height="15" uuid="bf0adddf-953a-4a5e-8229-fa8d99ce8310"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="839" y="0" width="83" height="15" uuid="e78aa943-3e70-4730-b90c-32dcf1255bbb"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="924" y="0" width="63" height="15" uuid="f613704d-7145-414e-8d17-87493066f972"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="994" y="0" width="73" height="15" uuid="02ccd097-041d-4d6c-b8a9-fded7a321479"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1078" y="0" width="47" height="15" uuid="a375b291-c153-4f07-b2b7-f1713435754c"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1123" y="0" width="83" height="15" uuid="349be421-a7f4-42ad-9a3b-42bca31b2465"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1197" y="0" width="92" height="15" uuid="2fdb70e1-5e28-4054-84f8-f14e2730a982"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1295" y="0" width="63" height="15" uuid="c2256c9a-be94-466d-b726-2903962f5355"/>
+					<textFieldExpression><![CDATA[$F{organizacionredfttc_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1360" height="1" uuid="9ce1b59a-1d7b-4f88-afac-1d155f936c46"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="b6689893-b288-4549-8e8d-ad5a3d0e56d9"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="8f7e2238-3f5f-44c1-a3bc-76f1be72b9f8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Organizacion Red Fttc]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

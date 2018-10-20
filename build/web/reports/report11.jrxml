@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report11" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="a71f5731-9bda-4bce-bf8b-891d0db11272">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="8"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     modernizaciongirardot.`central` AS modernizaciongirardot_central,
+     modernizaciongirardot.`distrito` AS modernizaciongirardot_distrito,
+     modernizaciongirardot.`pr` AS modernizaciongirardot_pr,
+     modernizaciongirardot.`tema` AS modernizaciongirardot_tema,
+     modernizaciongirardot.`costocontrato` AS modernizaciongirardot_costocontrato,
+     modernizaciongirardot.`costoproyecto` AS modernizaciongirardot_costoproyecto,
+     modernizaciongirardot.`pares` AS modernizaciongirardot_pares,
+     modernizaciongirardot.`estado` AS modernizaciongirardot_estado,
+     modernizaciongirardot.`fechaentrega` AS modernizaciongirardot_fechaentrega,
+     modernizaciongirardot.`inicioprogramado` AS modernizaciongirardot_inicioprogramado,
+     modernizaciongirardot.`finprogramado` AS modernizaciongirardot_finprogramado,
+     modernizaciongirardot.`avance` AS modernizaciongirardot_avance,
+     modernizaciongirardot.`fechareporte` AS modernizaciongirardot_fechareporte,
+     modernizaciongirardot.`mesfacturacion` AS modernizaciongirardot_mesfacturacion,
+     modernizaciongirardot.`contratista` AS modernizaciongirardot_contratista
+FROM
+     `modernizaciongirardot` modernizaciongirardot]]>
+	</queryString>
+	<field name="modernizaciongirardot_central" class="java.lang.String"/>
+	<field name="modernizaciongirardot_distrito" class="java.lang.Integer"/>
+	<field name="modernizaciongirardot_pr" class="java.lang.Integer"/>
+	<field name="modernizaciongirardot_tema" class="java.lang.String"/>
+	<field name="modernizaciongirardot_costocontrato" class="java.lang.Integer"/>
+	<field name="modernizaciongirardot_costoproyecto" class="java.lang.Integer"/>
+	<field name="modernizaciongirardot_pares" class="java.lang.Integer"/>
+	<field name="modernizaciongirardot_estado" class="java.lang.String"/>
+	<field name="modernizaciongirardot_fechaentrega" class="java.lang.String"/>
+	<field name="modernizaciongirardot_inicioprogramado" class="java.lang.String"/>
+	<field name="modernizaciongirardot_finprogramado" class="java.lang.String"/>
+	<field name="modernizaciongirardot_avance" class="java.lang.String"/>
+	<field name="modernizaciongirardot_fechareporte" class="java.lang.String"/>
+	<field name="modernizaciongirardot_mesfacturacion" class="java.lang.String"/>
+	<field name="modernizaciongirardot_contratista" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="1360" height="67" uuid="d649eb5e-c22f-4cfe-85e6-3d7ebb479546"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[ETB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="1360" height="37" uuid="b1afc150-00bb-4883-9357-1846c805153e"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Renovacion Girardot ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="1360" height="20" backcolor="#003399" uuid="f830f6d2-4cf7-4400-a904-c1cc53936c37"/>
+				<staticText>
+					<reportElement style="Column header" x="75" y="0" width="47" height="15" uuid="9be504d6-4b54-4a0f-a300-7e9ecabde069"/>
+					<text><![CDATA[Central]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="194" y="0" width="47" height="15" uuid="6d397793-e687-48a9-bb60-6337bc2ac640"/>
+					<text><![CDATA[Distrito]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="267" y="0" width="18" height="15" uuid="0604ad05-a1ef-489a-9dca-a22486368cfa"/>
+					<text><![CDATA[Pr]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="399" y="0" width="36" height="15" uuid="5f4b6405-978f-41a8-945e-28713933201c"/>
+					<text><![CDATA[Tema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="520" y="0" width="88" height="15" uuid="1f7c0431-d6c9-4f3a-a3ab-ecd343b2477a"/>
+					<text><![CDATA[Costo contrato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="609" y="0" width="90" height="15" uuid="5b2fc1b8-25a9-4aaf-8be1-0a5bf75ff9ba"/>
+					<text><![CDATA[Costo proyecto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="707" y="0" width="36" height="15" uuid="60613586-8ade-429a-a83e-bffc9cb21d54"/>
+					<text><![CDATA[Pares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="773" y="0" width="47" height="15" uuid="ba1548ac-1a90-42b2-9fcc-2ecdd2906158"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="843" y="0" width="84" height="15" uuid="15224e45-a829-4084-9208-e89d9d0a6dc6"/>
+					<text><![CDATA[Fecha entrega]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="928" y="0" width="66" height="15" uuid="8c7a5692-4d3e-438d-b0cd-bb55760d1e42"/>
+					<text><![CDATA[Inicio obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1003" y="0" width="58" height="15" uuid="ff471c9d-c165-4e30-8126-5215836c0f1d"/>
+					<text><![CDATA[Fin obra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1064" y="0" width="47" height="15" uuid="2feb7118-eab7-4fed-88b3-3dc61064f774"/>
+					<text><![CDATA[Avance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1110" y="0" width="81" height="15" uuid="9c734326-aee9-42a9-89cd-d9ba4194ce79"/>
+					<text><![CDATA[Fecha reporte]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1193" y="0" width="94" height="15" uuid="a6df0f0d-2df5-4093-9204-891df85774b2"/>
+					<text><![CDATA[Mes facturacion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="1292" y="0" width="67" height="15" uuid="4ea1ab0f-8324-402e-9807-ec0273401b01"/>
+					<text><![CDATA[Contratista]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="1359" height="15" uuid="87ec2922-52c7-4d24-86e1-3c793dff0941"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="192" height="15" uuid="abeec7dd-afd1-48de-a25b-021cee30d471"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_central}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="192" y="0" width="47" height="15" uuid="77536b9a-dd96-4798-a2c0-44b6b13fdd90"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_distrito}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="244" y="0" width="47" height="15" uuid="86bf3536-6b40-46bc-b116-1de3d7b8024f"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_pr}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="293" y="0" width="224" height="15" uuid="5fcec279-23db-46e3-b7e9-b579a616da15"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_tema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="520" y="0" width="86" height="15" uuid="ae1be2ef-a2fe-4c08-8c54-7077ecfd5005"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_costocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="609" y="0" width="89" height="15" uuid="97719ab8-a879-4267-8aa0-113962017d3b"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_costoproyecto}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="701" y="0" width="47" height="15" uuid="46eef306-1e59-4a04-ba67-63aa1510b77c"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_pares}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="749" y="0" width="99" height="15" uuid="9221bc09-8f01-4cfe-8207-77ff4b1469f7"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="850" y="0" width="81" height="15" uuid="e16503ba-9f9c-4bf6-8f98-08c85bbb7f39"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_fechaentrega}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="929" y="0" width="63" height="15" uuid="1b7597e7-38cc-4b0f-a985-a3aeb7554c5a"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_inicioprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="995" y="0" width="65" height="15" uuid="3ab6100e-4ce3-43cc-a274-85726aeef721"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_finprogramado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1070" y="0" width="47" height="15" uuid="c76505cb-e2a3-414a-8009-c9720d29e167"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_avance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1116" y="0" width="77" height="15" uuid="94761840-dda6-4085-bca7-25d9d14681d7"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_fechareporte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1193" y="0" width="92" height="15" uuid="448e606b-eaa6-4bd4-a43e-7dccc8e250ec"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_mesfacturacion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="1292" y="0" width="67" height="15" uuid="9f587328-698b-4d86-a2ed-3e26ea7fb0c1"/>
+					<textFieldExpression><![CDATA[$F{modernizaciongirardot_contratista}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="1360" height="1" uuid="f3e245e1-ca56-48c3-a682-7b2d79135d17"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="89d384d4-12bc-4dc4-ab1f-62c2d1f83886"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="363" height="20" uuid="a1c77ab1-57f0-4b91-a8ee-018221349842"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Renovacion Girardot]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
